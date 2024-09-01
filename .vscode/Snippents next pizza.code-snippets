@@ -1,0 +1,65 @@
+{
+	
+	"TypeScript React Component": {
+		"prefix": "trsc",
+		"body": [
+			"import React from 'react';",
+			"",
+			"export const ${1:${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}: React.FC = (${2}) => {",
+			"  return (",
+			"    <div>${3}</div>",
+			"  );",
+			"}};"
+		],
+		"description": "TypeScript React Component"
+	},
+	"TypeScript React Component with Props": {
+		"prefix": "trscp",
+		"body": [
+			"import React from 'react';",
+			"",
+			"interface Props {",
+			"className?: string;",
+			"}",
+			"",
+			"export const ${1:${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}: React.FC<Props> = ({ className }}) => {",
+			"  return (",
+			"    <div className={className}>${3}</div>",
+			"  );",
+			"};"
+		],
+		"description": "TypeScript React Component with Props"
+	},
+	"TypeScript React Component with Props + CN": {
+		"prefix": "trscpn",
+		"body": [
+			"import React from 'react';",
+			"import { cn } from '@/lib/utils';",
+			"",
+			"interface Props {",
+			"className?: string;",
+			"}",
+			"",
+			"export const ${1:${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}: React.FC<Props> = ({ className }}) => {",
+			"  return (",
+			"    <div className={cn(className)}>${3}</div>",
+			"  );",
+			"};"
+		],
+		"description": "TypeScript React Component with Props + CN"
+	},
+	"'use client' directive": {
+		"prefix": "uc",
+		"body": [
+			"'use client';",
+		],
+		"description": "'use client' directive"
+	},
+	"import Axios": {
+		"prefix": "ia",
+		"body": [
+			"import axios from 'axios';",
+		],
+		"description": "import Axios"
+	}
+}
